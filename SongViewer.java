@@ -214,6 +214,7 @@ public class SongViewer{
             }
         });
 
+        // Prev Button Action Listener
         prevButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -225,6 +226,7 @@ public class SongViewer{
             }
         });
 
+        // Next Button Action Listener
         nextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -236,6 +238,7 @@ public class SongViewer{
             }
         });
 
+        // Year Drop-down Menu Action Listener
         yearDropDown.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -251,7 +254,12 @@ public class SongViewer{
         });
     }
 
-        private void showSong (int songIndex, SongManager songManager) {
+    /**
+     * showSong methods provides information about specific song from specific year selected in the drop-down menu
+     * @param songIndex     index of song within the specified year of the Song array
+     * @param songManager   instance of SongManager class used to pull in info regarding arrays
+     */
+    private void showSong (int songIndex, SongManager songManager) {
             Song song = songArray[yearIndex][songIndex];
 
             if (song != null) {
