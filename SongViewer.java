@@ -170,15 +170,15 @@ public class SongViewer{
         songFrame.add(shazamChartsRank);
 
         // Presence & Rank in Charts Text
-        presenceRankText = new JLabel("-- Presence & Rank in Charts --");
-        presenceRankText.setBounds(90, 270, 250, 30);
+        presenceRankText = new JLabel("");
+        presenceRankText.setBounds(70, 270, 250, 30);
         presenceRankText.setVisible(false);
         presenceRankText.setBackground(Color.WHITE);
         songFrame.add(presenceRankText);
 
         // Presence & Rank in Charts Panel
         presenceRankPanel = new JPanel();
-        presenceRankPanel.setBounds(85, 278, 185, 17);
+        presenceRankPanel.setBounds(65, 278, 235, 17);
         presenceRankPanel.setBackground(new java.awt.Color(204, 153, 255));
         presenceRankPanel.setVisible(false);
         songFrame.add(presenceRankPanel);
@@ -284,6 +284,7 @@ public class SongViewer{
                     totalStreamsField.setText("n/a");
                 }
 
+                presenceRankText.setText(("-- Presence & Rank in Charts for " + song.releasedYear() + " --"));
                 spotifyChartsRank.setText(song.spotifyCharts());
                 appleChartsRank.setText(song.appleCharts());
                 shazamChartsRank.setText(song.shazamCharts());
